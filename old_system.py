@@ -9,9 +9,9 @@ def run_system_monolith():
     print("...")
     print("WELCOME TO FLEET COMMAND")
     
-    
-    loading = 0
-    while loading < 5:
+    loading = 0 #Dfine loading first
+    while loading < 5: 
+        loading = loading + 1 # Increment loading IN the While loop
         print("Loading module " + str(loading))
         
     
@@ -25,19 +25,22 @@ def run_system_monolith():
         
         opt = input("Select option: ")
         
-        if opt = "1":  
+        if opt == "1":  #Missing another '=' 
             print("Current Crew List:")
             
-            for i in range(10):
+            for i in range(len(n)): #len(n) allows for different amounts instead of a fixed one
                 print(n[i] + " - " + r[i]) 
                 
         elif opt == "2":
             new_name = input("Name: ")
+        
             new_rank = input("Rank: ")
+            
             new_div = input("Division: ")
             
-           
             n.append(new_name)
+            r.append (new_rank) #List is parallel, one more needed to be added since n was 5 and the rest were 4, append fixes this issue.
+            d.append (new_div)
             print("Crew member added.")
             
         elif opt == "3":
@@ -54,9 +57,9 @@ def run_system_monolith():
             count = 0
             
             for rank in r:
-                if rank == "Captain" or "Commander": 
+                if rank == "Captain" or rank == "Commander": 
                     count = count + 1
-            print("High ranking officers: " + count) 
+            print("High ranking officers: " + str(count) ) #Make count a string
             
         elif opt == "5":
             print("Shutting down.")
@@ -88,4 +91,4 @@ def run_system_monolith():
             
         print("End of cycle.")
 
-run_system_monolith
+run_system_monolith() #Call function by adding ()
