@@ -96,6 +96,19 @@ def filter_by_division(names, divs):
     if not found: 
         print("No matching divisions found...")
 
+def calculate_payroll(ranks):
+    pay_ranks = ["Captain", "Commander", "Lt.Commander", "Lieutenant", "Ensign"]
+    pay_values = [1000, 800, 600, 400, 100]
+    total = 0
+    for rank in ranks:
+        if rank in pay_ranks:
+            idx = pay_ranks.index(rank)
+            total = total + pay_values[idx]
+        else:
+            pass
+    return total
+
+def 
 
 
 
