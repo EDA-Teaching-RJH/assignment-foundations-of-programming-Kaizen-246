@@ -77,7 +77,7 @@ def search_crew(names, ranks, divs, ids):
     found = False
 
     for i in range(len(names)):
-        if term.names in names[i].lower():
+        if term.lower() in names[i].lower():
             print( ids[i], names[i], ranks[i], divs[i])
             found = True
 
@@ -159,3 +159,5 @@ def main():
 
         else:
             print("Invalid option.")
+    
+main()
