@@ -1,7 +1,7 @@
 def init_database():
-    names = ["Picard", "Riker""", "Data", "Worf", "Leslie"]
-    ranks = ["Captain", "Commander", "Lt. Commander", "Lieutenant"]
-    divs = ["Command", "Command", "Operations", "Security"]
+    names = ["Picard", "Riker", "Data", "Worf", "Leslie"]
+    ranks = ["Captain", "Commander", "Lt. Commander", "Lieutenant","Ensign"]
+    divs = ["Command", "Operations", "Security", "Medical", "Trainee"]
     ids= ["NCC-1701-A", "NCC-1701-B", "NCC-1701-C", "NCC-1701-D", "NCC-1701-E"]
     return names, ranks, divs, ids
 
@@ -21,6 +21,26 @@ def display_menu(current_user):
     return choice
     
 def add_members(names, ranks, divs, ids):
+    new_name = input("Name: ").strip()
+    new_rank = input("Rank: ").strip()
+    new_div = input("Division: ").strip()
+    new_id = input("ID: ").strip()
+    if new_id in ids:
+        print("Error: ID already exists!!")
+        return
+    elif new_rank not in ranks:
+        print("Please choose a valid rank...")
+        return
+    elif new_div not in divs:
+        print("Please enter a valid division...")
+        return
+    names.append(new_name)
+    ranks.append(new_rank)
+    divs.append(new_div)
+    ids.append(new_id)
+    print("Crew member added successfully")
+       
+
     
 
 
