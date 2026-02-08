@@ -72,6 +72,23 @@ def  display_roster(names, ranks, divs, ids):
     for i in range(len(names)):
         print(ids[i], names[i], divs[i], ranks[i])
 
+def search_crew(names, ranks, divs, ids):
+    term = input ("Enter name to search for: ").strip()
+    found = False
+
+    for i in range(len(names)):
+        if term.names in names[i].lower():
+            print( ids[i], names[i], ranks[i], divs[i])
+            found = True
+
+    if not found:
+        print("No matching crew found...")
+
+def 
+
+
+
+
 
     
     
