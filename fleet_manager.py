@@ -90,7 +90,7 @@ def filter_by_division(names, divs):
     
     for i in range(len(names)):
         if divs[i] == choice:
-            print names[i] 
+            print(names[i])
             found = True
 
     if not found: 
@@ -108,35 +108,54 @@ def calculate_payroll(ranks):
             pass
     return total
 
-def 
+def count_officers(ranks):
+    count = 0
 
-
-
-
-
-
+    for rank in ranks:
+        if rank == "Captain" or rank == "Commander":
+            count = count + 1 
     
-    
-
-
-
-
-
-
+    return count
 
     
 
 
 def main():
     names, ranks, divs, ids = init_database()
-    print(names)
-    print(ranks)
-    print(divs)
-    print(ids)
+    current_user = input(" Enter your full name: ")
 
-    if choice == 1:
-        display_roster(names, ranks, divs, ids)
-    
-    user_name = input("Enter your full name: ").strip()
-    choice = display_menu(user_name)
+    while True:
+        choice = display_menu(current_user)
 
+        if choice == "1":
+            display_roster(names, ranks, divs, ids)
+
+        elif choice == "2":
+            add_members(names, ranks, divs, ids)
+
+        elif choice == "3":
+            remove_member(names, ranks, divs, ids)
+
+        elif choice == "4":
+            update_rank(names, ranks, ids)
+
+        elif choice == "5":
+            search_crew(names, ranks, divs, ids)
+
+        elif choice == "6":
+            filter_by_division(names, divs)
+
+        elif choice == "7":
+            officers = count_officers(ranks)
+            print("Officers (Captain / Commander):", officers)
+
+        elif choice == "8":
+            total = calculate_payroll(ranks)
+            print("Total payroll credits:", total)
+
+        elif choice == "0":
+            print("Exiting system.")
+            break
+
+        else:
+            print("Invalid option.")
