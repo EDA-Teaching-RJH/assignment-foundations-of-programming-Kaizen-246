@@ -60,6 +60,20 @@ def update_rank(names, ranks, ids):
     idx = ids.index(upid)
     new_rank = input("Enter new rank: ").strip()
     ranks[idx] = new_rank
+
+def  display_roster(names, ranks, divs, ids):
+    
+    print("!!!CREW ROSTER!!!")
+    
+    if len(names) == 0:
+        print("No crew in database...")
+        return
+    
+    for i in range(len(names)):
+        print(ids[i], names[i], divs[i], ranks[i])
+
+
+    
     
 
 
