@@ -84,7 +84,19 @@ def search_crew(names, ranks, divs, ids):
     if not found:
         print("No matching crew found...")
 
-def 
+def filter_by_division(names, divs):
+    choice = input("Enter division |Command, Operations, Security, Medical, Trainee|: ").strip()
+    found = False
+    
+    for i in range(len(names)):
+        if divs[i] == choice:
+            print names[i] 
+            found = True
+
+    if not found: 
+        print("No matching divisions found...")
+
+
 
 
 
