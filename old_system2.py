@@ -48,6 +48,9 @@ def run_system_monolith():
             rem = input("Name to remove: ")
            
             idx = n.index(rem)
+            if rem not in n:
+                print("Not found...")#system crashed if name wasn't listed
+                return
             n.pop(idx)
             r.pop(idx)
             d.pop(idx)
