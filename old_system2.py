@@ -27,7 +27,7 @@ def run_system_monolith():
         
         opt = input("Select option: ")
         
-        if opt = "1":  
+        if opt == "1":  #missing second =
             print("Current Crew List:")
             
             for i in range(10):
