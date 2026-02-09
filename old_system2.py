@@ -30,7 +30,7 @@ def run_system_monolith():
         if opt == "1":  #missing second =
             print("Current Crew List:")
             
-            for i in range(10):
+            for i in range(len(n)): #len(n) allows for different lengthed variables
                 print(n[i] + " - " + r[i]) 
                 
         elif opt == "2":
