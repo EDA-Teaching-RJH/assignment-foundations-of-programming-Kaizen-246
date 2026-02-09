@@ -60,7 +60,7 @@ def run_system_monolith():
             for rank in r:
                 if rank == "Captain" or "Commander": 
                     count = count + 1
-            print("High ranking officers: " + count) 
+            print("High ranking officers: " + str(count)) #make count a string else it cannt be printed
             
         elif opt == "5":
             print("Shutting down.")
