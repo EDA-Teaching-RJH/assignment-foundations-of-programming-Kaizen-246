@@ -40,6 +40,8 @@ def run_system_monolith():
             
            
             n.append(new_name)
+            r.append(new_rank)
+            d.append(new_div) #list is parallel therefore one more is needed for rank and div
             print("Crew member added.")
             
         elif opt == "3":
