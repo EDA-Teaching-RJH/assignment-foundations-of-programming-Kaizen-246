@@ -86,8 +86,7 @@ def run_system_monolith():
             print("Database empty.")
 
         
-        fuel = 100
-        consumption = 0
+        fuel = 100 # consumption was useless code
         while fuel > 0:
             
             print("Idling...")
