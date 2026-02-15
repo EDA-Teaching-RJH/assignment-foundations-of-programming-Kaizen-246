@@ -31,8 +31,8 @@ def run_system_monolith():
             print("Current Crew List:")
             
             limit = min(len(n), len(r), len(d))
-            for i in range(len(limit)): #range(limit) allows for all to have different lengthed variables
-                print(n[i] + " - " + r[i]) 
+            for i in range(limit): #range(limit) allows for all to have different lengthed variables
+                print(n[i] + " - " + r[i]) #len(limit) caused a crash
                 
         elif opt == "2":
             new_name = input("Name: ")
