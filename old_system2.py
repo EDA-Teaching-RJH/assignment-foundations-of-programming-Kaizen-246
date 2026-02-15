@@ -31,7 +31,7 @@ def run_system_monolith():
             print("Current Crew List:")
             
             limit = min(len(n), len(r), len(d))
-            for i in range(len(limit)): #len(limit) allows for all to have different lengthed variables
+            for i in range(len(limit)): #range(limit) allows for all to have different lengthed variables
                 print(n[i] + " - " + r[i]) 
                 
         elif opt == "2":
@@ -46,12 +46,15 @@ def run_system_monolith():
             print("Crew member added.")
             
         elif opt == "3":
-            rem = input("Name to remove: ")
-           
-            idx = n.index(rem)
+            rem = input("Name to remove: ") #Checks if name is in list first
+
             if rem not in n:
                 print("Not found...")#system crashed if name wasn't listed
-                return
+                continue
+           
+            
+            idx = n.index(rem)
+            
             n.pop(idx)
             r.pop(idx)
             d.pop(idx)
